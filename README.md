@@ -48,11 +48,14 @@ How to run this project
 > truffle unbox webpack
 16. Copy over Voting.sol to contracts directory
 17. Replace all the contents of 2_deploy_contracts.js in the migrations directory with the followings
+
 var Voting = artifacts.require("./Voting.sol");
 module.exports = function(deployer) {
   deployer.deploy(Voting, ['Rama', 'Nick', 'Jose'], {gas: 6700000});
 };
+
 18. Add gas in truffle.js
+
 require('babel-register')
 module.exports = {
   networks: {
@@ -64,6 +67,7 @@ module.exports = {
     }
   }
 }
+
 19. Checkout replaced contents of app/javascripts/app.js
 20. Checkout replaced contents of app/index.html
 21. Change the port to :8545 in truffle.js
