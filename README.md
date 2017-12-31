@@ -71,9 +71,11 @@ module.exports = {
 > truffle console
 
 truffle(default)> web3.personal.newAccount('verystrongpassword')
+
 '{You will get your own address}'
 
 truffle(default)> web3.eth.getBalance('Your own address')
+
 { [String: '0'] s: 1, e: 0, c: [ 0 ] }
 
 truffle(default)> web3.personal.unlockAccount('Your own address', 'verystrongpassword', 15000)
